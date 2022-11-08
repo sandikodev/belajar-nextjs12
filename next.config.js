@@ -1,24 +1,19 @@
 /** @type {import('next').NextConfig} */
+const { withPlaiceholder } = require("@plaiceholder/next");
+
 const nextConfig = {
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/api/:path*",
-  //       headers: [
-  //         { key: "Origin", value: "127.0.0.1:3001" },
-  //         { key: "Access-Control-Allow-Credentials", value: "true" },
-  //         { key: "Access-Control-Allow-Origin", value: "*" },
-  //         { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-  //         { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-  //       ]
-  //     }
-  //   ]
-  // },
+  experimental: { externalDir: true, images: { allowFutureImage: true } },
   images: {
-    domains: ['localhost'],
+    domains: [
+      "localhost",
+      "images.unsplash.com",
+      "via.placeholder.com",
+      "photos.petfinder.com",
+      "dl5zpyw5k3jeb.cloudfront.net",
+    ],
   },
   reactStrictMode: true,
   swcMinify: true,
 }
-// console.log(nextConfig.headers)
-module.exports = nextConfig
+
+module.exports = withPlaiceholder(nextConfig)

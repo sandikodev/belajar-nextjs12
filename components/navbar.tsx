@@ -17,6 +17,9 @@ function Navbar() {
                                 <Link href="/posts" className="nav-link">Posts</Link>
                             </li>
                             <li className="nav-item">
+                                <Link href="/types" className="nav-link">Types</Link>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="https://santrikoding.com" target="_blank" rel="noreferrer">Users</a>
                             </li>
                         </ul>
