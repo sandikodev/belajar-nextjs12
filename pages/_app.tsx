@@ -1,14 +1,19 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+
 import Head from "next/head";
 import Script from "next/script";
-import type { AppProps } from 'next/app'
 import Layout from '../components/layout';
+import { SessionProvider } from "next-auth/react"
+
+import 'bootstrap/dist/css/bootstrap.css'
+import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      < Component {...pageProps} />
-    </Layout>
+    <SessionProvider session={pageProps.session}>
+      <Layout>
+        < Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
   )
 }

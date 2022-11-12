@@ -13,20 +13,17 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                            <li className="nav-item">
-                                <Link href="/posts" className="nav-link">Posts</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link href="/types" className="nav-link">Types</Link>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="https://santrikoding.com" target="_blank" rel="noreferrer">Users</a>
-                            </li>
+                            <Link href="/posts" className="nav-link">Posts</Link>
+                            <Link href="/types" className="nav-link">Types</Link>
+                            <Link href="/users" className="nav-link">Users</Link>
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-success" type="submit">Search</button>
+                            <button className="btn btn-info" type="submit">Search</button>
                         </form>
+                        <Link href="/dashboard" className="mx-2 btn btn-warning">
+                            Dashboard
+                        </Link>
                     </div>
                 </div>
             </nav>

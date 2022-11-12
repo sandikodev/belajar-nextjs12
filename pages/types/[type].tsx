@@ -4,7 +4,7 @@
 // with slugified pet animal types, such as dog and small-furry.
 
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-
+import { ParsedUrlQuery } from "querystring";
 export interface TypePageProps {
 
 }
