@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Authbar from 'components/authbar'
 function Navbar() {
     return (
         <header>
@@ -24,6 +24,7 @@ function Navbar() {
                         <Link href="/dashboard" className="mx-2 btn btn-warning">
                             Dashboard
                         </Link>
+                        <Authbar />
                     </div>
                 </div>
             </nav>

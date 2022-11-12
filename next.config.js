@@ -16,6 +16,7 @@ const nextConfig = {
   experimental: { externalDir: true, images: { allowFutureImage: true } },
   images: {
     domains: [
+      "avatars.githubusercontent.com",
       "localhost",
       "images.unsplash.com",
       "via.placeholder.com",

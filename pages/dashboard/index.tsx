@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from 'components/header'
+import Header from 'components/authbar'
 import styles from 'styles/Home.module.css'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
@@ -14,7 +14,7 @@ export default function Home() {
                 <title>Nextjs | Next-Auth</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {/* <Header /> */}
+            <Header />
             <main className={styles.main}>
                 <div className={styles.user}>
                     {loading && <div className={styles.title}>Loading...</div>}
@@ -30,14 +30,14 @@ export default function Home() {
                                     alt="user-icon"
                                     className={styles.avatar} />
                             </> :
-                            <div className='d-flex justify-content-center'>
+                            <div className='d-flex justify-content-around'>
                                 <Image
                                     width={100}
                                     height={100}
                                     src="/icon.png"
                                     alt="login-icon"
                                     className={styles.avatar} />
-                                <p className={styles.title} style={{ margin: '100 200 220 200' }}>Please log in to continue</p>
+                                <p className={styles.title}>Please log in to continue</p>
 
                             </div>
                     }
